@@ -1,0 +1,989 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #111010;
+    --secondary-color: #fcffcc;
+}
+.brightness{
+    --primary-color: #fcffcc;
+    --secondary-color: #111010;
+}
+/* .blackMode{
+    --primary-color: #fcffcc;
+    --secondary-color: #111010;
+} */
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background: brown;
+    border-radius: 25px;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+body{
+    background: var(--primary-color);
+    font-family: 'roboto', sans-serif, 'Poppins';
+    overflow: hidden;
+    transition: background 0.5s;
+}
+html{
+    scroll-behavior: smooth;
+    transition: scroll-behavior 0.5s;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/* i{
+    color: var(--secondary-color);
+} */
+.menu{
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu .dehaze-one{
+   color: var(--secondary-color);
+   font-size: 25px;
+}
+.menu .dehaze-two{
+   color: var(--primary-color);
+   font-size: 25px;
+}
+.box-red{
+    width: 39px;
+    height: 28px;
+    background: red;
+    border-radius: 8px;
+    position: relative;
+}
+.white-triangle{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    transform: rotate(45deg);
+    background: var(--secondary-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    transition: background 0.5s;
+}
+.youtube-logo{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;  
+    cursor: pointer;
+}
+h1.text-1{
+    letter-spacing: -2px;
+    font-family: 'roboto condensed';
+    position: relative;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.5s;
+}
+h1.text{
+    letter-spacing: -2px;
+    font-family: 'roboto condensed';
+    position: relative;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.5s;
+}
+h1.text::after{
+    content: 'GH';
+    position: absolute;
+    top: 0;
+    font-size: 10px;
+    font-family: roboto;
+    font-weight: 400;
+}
+.yotube-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+}
+.logo-icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+}
+.input-search{
+    display: flex;
+    align-items: center;
+    border: 1px solid #5555556c;
+    /* padding: 10px; */
+    width: 50vw;
+    border-radius: 50px;
+}
+input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 0 20px;
+    outline: 0;
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-family: roboto;
+    letter-spacing: 1.2px;
+    transition: color 0.5s;
+}
+.input-search button {
+    background: var(--primary-color);
+    cursor: pointer;
+    padding: 10px 25px;
+    border-left: 2px solid #555;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    transition: background 0.5s;
+    overflow: hidden;
+}
+.input-search button:hover{
+    background: var(--secondary-color);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px; 
+    transition: background 0.5s;
+}
+.glass{
+    color: var(--secondary-color);
+    font-size: 20px;
+    transition: color 0.5s;
+}
+.glass:hover{
+    color: var(--primary-color);
+}
+.mic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background 0.5s;
+}
+.mic:hover{
+    background: var(--primary-color);
+}
+.mic-icons{
+    color: var(--primary-color);
+    transition: color 0.5s;
+}
+.mic-icons:hover{
+    color: var(--secondary-color);
+}
+.notifications{
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 17px;
+    transition: color 0.5s;
+}
+.notifications:hover{
+    color: #524b4bea;
+}
+/* ---------------------top-nav---------------- */
+.wrapper{
+    position: relative;
+    padding: 15px 35px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90vw;   
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.rightBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transition: background 0.5s;
+    
+}
+.rightBox i{
+    color: var(--primary-color);
+    transition: color 0.5s;
+}
+.rightBox:hover{
+    background: var(--primary-color);
+}
+.right-arrow-symbols{
+    color: #000000;
+    cursor: pointer;
+    font-size: 35px;
+    transition: color 0.5s;
+}
+.right-arrow-symbols:hover{
+   color: var(--secondary-color);
+}
+.leftBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transition: background 0.5s;
+    display: none;
+}
+
+.top-nav-list{ 
+    display: flex;
+    gap: 12px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.top-nav-list.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.top-nav{
+    white-space: nowrap;
+    border: 0;
+    background: var(--secondary-color);
+    padding: 7px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: roboto;
+    color: var(--primary-color);
+    transition: background 0.5s;
+}
+.top-nav-list.dragging .top-nav{
+    user-select: none;
+}
+.top-nav:hover{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+.active-top-nav{
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background 0.5s;
+    transition: color 0.5s;
+    transition: border 0.5s;
+}
+.active-top-nav:hover{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* --------------------------------more-right-side----------------- */
+.more-right-side{
+    position: absolute;
+    right: -300px;
+    top: 50px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    width: 300px;
+    z-index: 2;
+    transition: right 0.5s ease;
+}
+.more-right-side-retrieve{
+    right: 0px;
+}
+.more-dot{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+.more-dot i{
+    color: var(--primary-color);
+}
+.more-dot:hover{
+    background: #312e2e;
+    /* border-radius:  25px; */
+}
+.ion-icon{
+    display: flex;
+    justify-content: flex-end;
+}
+.m-2{
+    margin-right: 10px;
+}
+
+.right-ion-icon{
+    font-size: 15px;
+    color: #999;
+    flex: 1;
+}
+
+/* -------------------------relative-dot-dark---------------- */
+.relative-dot-dark{
+    position: relative;
+    z-index: 3;
+}
+.switch-dark{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 150px;
+    /* height: 100px; */
+    background: var(--secondary-color);
+    transition: left 0.5s ease;
+}
+.dark-switch{
+    left: -150px;
+}
+.dark-mode{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.dark-mode:hover{
+    background: #1d1c1c41;
+}
+/* ------------------------fixed-library-container-------------- */
+.fixed-library-container{
+    background: none;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+.icon-library{
+   padding: 5px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.fixed-icons{
+    display: none;
+    cursor: pointer;
+}
+.add{
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+}
+
+/* ---------------------add-sign------------------------- */
+
+.add-circle-bg-container{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-2%);
+    bottom: -500px;
+    background: var(--primary-color);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: bottom 0.5s;
+}
+.addSignUp{
+    bottom: 0;
+}
+.add-circle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.add-circle i{
+    color: var(--secondary-color);
+}
+.add-circle-icons{
+    padding: 10px;
+}
+.add-icons{
+    display: flex;
+    align-items: center;
+    margin: 10px 8px;
+}
+.add-icons i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: #333333d0;
+    border-radius: 50%;
+    border: 0;
+    color: #ffff;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.createShort{
+    color: var(--secondary-color);
+}
+/* -------------------left-menu-get-------------------- */
+
+.left-nav-logo-yotube{
+   margin-left: 10px;
+}
+.second-absolute{
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.left-navBar-container{
+    position: absolute;
+    left: -300px;
+    top: 0;
+    background: var(--secondary-color);
+    width: 300px;
+    height: 100vh;
+    overflow-y: scroll;
+    transition: left 0.5s ease;
+    z-index: 2;
+}
+.left-navBar-container::-webkit-scrollbar{
+    width: 8px;
+}
+.left-navBar-container::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 25px;
+}
+.left-navBar-container::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.leftNavigation{
+    left: 0;
+}
+.left-navBar-icons{
+    display: flex;
+    align-items: center;
+}
+.left-navBar-icons i{
+    color: var(--primary-color);
+}
+.you-more{
+   margin-left: 20px;
+   margin-top: 20px;
+   border-bottom: 2px solid var(--primary-color);
+}
+.you-options{
+    display: flex;
+    align-items: center;
+}
+.left-nav-tool{
+    padding-left: 20px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.left-navBar-icons{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.5s;
+    padding: 10px;
+}
+.left-navBar-icons:hover{
+    background: #36343436;
+}
+.justify-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.you{
+    font-family: roboto;
+    font-family: 500;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    background: blue;
+    border-radius: 50%;
+}
+.sub-mic-icon{
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    font-size: 20px;
+}
+.mic-icon{
+    margin-right: 10px;
+}
+.left-icons{
+    color: var(--primary-color);
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 18px;
+}
+.subscribe-left{
+    margin-left: -5px;
+}
+.h2-subscribe{
+    margin-left: 25px;
+}
+.you-copyright{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: var(--primary-color);
+}
+
+/* -------------------------main-content-section----------------- */
+.main-content{
+    display: flex;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+}
+.main-content::-webkit-scrollbar{
+    width: 8px;
+}
+.main-content::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+    border-radius: 25px;
+}
+.main-content::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.content-col-1{
+    margin-left: 20px;
+    position: sticky;
+    top: 0;
+    width: 100px;
+}
+.main-content-icons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.main-content-icons:hover{
+    background-color: #777;
+}
+.main-content-symbols{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+.main-content-left-icons{
+    font-size: 15px;
+    color: var(--secondary-color);
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+
+/* -----------------------------video-section------------------------- */
+.video-container{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.video-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  
+}
+.video-content .card-video{
+    width: 100%;
+    height: 180px;
+    border-radius: 25px;
+    background: var(--secondary-color);
+}
+.sm-card{
+    display: flex;
+}
+.card-round{
+    width: 50px;
+    height: 45px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+.date{
+    font-size: 15px;
+    color: #e00505;
+}
+.para-title{
+    font-size: 13px;
+    font-family: roboto;
+    font-weight: 500;
+    color: #ccc;
+}
+.views{
+    font-family: roboto;
+    font-size: 13px;
+    font-weight: 500;
+    color: #b3aeae;
+}
+.live{
+    font-size: 13px;
+}
+.live-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(241, 21, 21);
+    width: 45px;
+    padding: 3px 8px;
+}
+.live-card i{
+    font-size: 11px;
+    color: #ffffffa9;
+}
+.live-p{
+    font-size: 10px;
+    color: #ffffffa9;
+    margin-left: 5px;
+}
+
+
+/* ------------------------media-querries-section------------ */
+@media only screen and (max-width:600px) {
+    .yotube-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .logo-icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .box-red{
+        width: 25px;
+        height: 18px;
+        background: red;
+        border-radius: 5px;
+        position: relative;
+    }
+    .white-triangle{
+        position: absolute;
+        left: 35%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+        transform: rotate(45deg);
+        background: #fcfcfc;
+        width: 5px;
+        height: 5px;
+        border-radius: 1px;
+    }
+    .youtube-logo{
+        margin-left: 10px;  
+    }
+    .youtube-logo .text{
+        font-size: 18px;  
+    }
+    .input-search{
+        display: none;
+    }
+    .mic{
+        display: none;
+    }
+    .notification-icons .video-not{
+        display: none;
+    }
+    .wrapper{
+        position: relative;
+        padding: 5px 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100vw;   
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+    .content-col-1{
+       display: none;
+    }
+    /* .more-right-side{
+        right: 0px;
+    } */
+    .fixed-library-container{
+        background: var(--secondary-color);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
+    }
+    .icon-library{
+        padding: 5px 10px;
+        color: var(--secondary-color);
+    }
+    .fixed-icons{
+        margin: 0 20px;
+        display: block;
+    }
+    .fixed-icons i{
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+    .fixed-icon:hover{
+        color: var(--secondary-color);
+    }
+}
+@media only screen and (max-width:700px) {
+    .yotube-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .logo-icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .box-red{
+        width: 25px;
+        height: 18px;
+        background: red;
+        border-radius: 5px;
+        position: relative;
+    }
+    .white-triangle{
+        position: absolute;
+        left: 35%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+        transform: rotate(45deg);
+        background: #fcfcfc;
+        width: 5px;
+        height: 5px;
+        border-radius: 1px;
+    }
+    .youtube-logo{
+        margin-left: 10px;  
+    }
+    .youtube-logo .text{
+        font-size: 18px;  
+    }
+    /* .input-search{
+        display: none;
+    } */
+    /* .mic{
+        display: none;
+    } */
+    .notification-icons .video-not{
+        display: none;
+    }
+    .wrapper{
+        position: relative;
+        padding: 5px 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100vw;   
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+    .content-col-1{
+       display: none;
+    }
+    .fixed-library-container{
+        background: var(--secondary-color);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
+    }
+    .icon-library{
+        padding: 5px 10px;
+        color: var(--secondary-color);
+    }
+    .fixed-icons{
+        margin: 0 20px;
+        display: block;
+    }
+    .fixed-icons i{
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+    .fixed-icon:hover{
+        color: var(--secondary-color);
+    }
+}
+@media only screen and (max-width:900px) {
+    .yotube-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .logo-icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .box-red{
+        width: 25px;
+        height: 18px;
+        background: red;
+        border-radius: 5px;
+        position: relative;
+    }
+    .white-triangle{
+        position: absolute;
+        left: 35%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+        transform: rotate(45deg);
+        background: #fcfcfc;
+        width: 5px;
+        height: 5px;
+        border-radius: 1px;
+    }
+    .youtube-logo{
+        margin-left: 10px;  
+    }
+    .youtube-logo .text{
+        font-size: 18px;  
+    }
+    .input-search{
+        display: none;
+    }
+    .mic{
+        display: none;
+    }
+    .notification-icons .video-not{
+        display: none;
+    }
+    .wrapper{
+        position: relative;
+        padding: 5px 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100vw;   
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+    .content-col-1{
+       display: none;
+    }
+    /* .more-right-side{
+        right: 0px;
+    } */
+    .fixed-library-container{
+        background: var(--secondary-color);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
+    }
+    .icon-library{
+        padding: 5px 10px;
+        color: var(--secondary-color);
+    }
+    .fixed-icons{
+        margin: 0 20px;
+        display: block;
+    }
+    .fixed-icons i{
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+    .fixed-icon:hover{
+        color: var(--secondary-color);
+    }
+ 
+    .add-circle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    .add-circle i{
+        color: var(--secondary-color);
+    }
+    .add-circle-icons{
+        padding: 10px;
+    }
+    .add-icons{
+        display: flex;
+        align-items: center;
+        margin: 10px 8px;
+    }
+    .add-icons:hover{
+        background: #312e2e5b;
+    }
+    .add-icons i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        background: #333333d0;
+        border-radius: 50%;
+        border: 0;
+        color: #ffff;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .createShort{
+        color: var(--secondary-color);
+    }
+}
+
